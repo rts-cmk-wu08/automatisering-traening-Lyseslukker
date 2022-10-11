@@ -1,8 +1,10 @@
-document.addEventListener("DOMContentLoaded", function() {
+import sections from "./components/sections"
 
-    // slå dig løs her... 
+import { hero, services, facilities, sites, advantages } from "./data"
+const sectionArray = [ hero, services, facilities, sites, advantages]
+const sectionArrayNames = [ "hero", "services", "facilities", "sites", "advantages"]
+const wrapper = document.querySelector(".wrapper")
 
-    //eksempel på at udskrive alle overskrifter i services i konsollen:
-    services.forEach(service => console.log(service.headline))
 
-}) // DOMContentLoaded slut
+const section = sections()
+
